@@ -19,9 +19,13 @@ Flowable and Flux have very similar API. Obviously, they both support basic oper
 
 ## What is back-pressure in non-blocking API's?
 
+
+
+
 # Getting Started
 ## Steps to setup this project
 1. Clone from github:
+
 git clone https://github.com/anuj-mehra/spring-boot-reactive-rest-api.git
 
 2. Import this project into an IDE (I used eclipse)
@@ -37,16 +41,25 @@ mvn clean install
 ## Dependencies:
 
 
+
+
 ## URL for REST API
 http://localhost:8080/positions/positionid?positionId=1
+
 http://localhost:8080/positions/customerid?customerId=1001
+
 http://localhost:8080/positions
 
 ## How to validate if response is non-blocking?
 
+
+
+
 ## Read for basic concepts:
 https://medium.com/@AnkurRatra/spring-reactive-stream-basic-concepts-mono-or-flux-part-1-baed4b432977
+
 https://www.nurkiewicz.com/2019/02/rxjava-vs-reactor.html
+
 https://github.com/chang-chao/spring-webflux-reactive-jdbc-sample
 
 
