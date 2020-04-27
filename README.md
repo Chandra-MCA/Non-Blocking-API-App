@@ -1,9 +1,16 @@
 # This project creates a non-blocking REST API using spring-boot-webflux and Reactive API's.
 
-# Reactive vs JavaRx2
-RxJava and Reactor are quite similar from a functional perspective. If you know 1.x or 2.x, Reactor will be very familiar, though you still have to learn about the differences. 
+When we use the spring framework in writing non blocking applications or reactive applications then mostly we will be programming with reactive streams.
 
-When it comes to RxJava/Reactor comparison, there are quite a few perspectives. Let me quickly go through some of the differences. I assume you have some familiarity with both of these libraries. 
+
+
+# Reactive vs JavaRx2
+Spring created MONO or FLUX, Rxjs created Observable , Rxjava created Observable. These all libraries provides the implementation of the reactive stream data type. Basically all are different names but underlying concepts are same.
+
+RxJava and Reactor are quite similar from a functional perspective. 
+
+When it comes to RxJava/Reactor comparison, there are quite a few perspectives. 
+
 
 ## API
 Flowable and Flux have very similar API. Obviously, they both support basic operators like map(), filter(), flatMap(), as well as more advanced ones. The main difference is the target Java version. RxJava 2.x must still support Java 6 as it is widely used on Android (read later on). Reactor, on the other hand, targets Java 8+. Therefore Reactor can take advantage of modern java API's.
@@ -61,5 +68,7 @@ https://medium.com/@AnkurRatra/spring-reactive-stream-basic-concepts-mono-or-flu
 https://www.nurkiewicz.com/2019/02/rxjava-vs-reactor.html
 
 https://github.com/chang-chao/spring-webflux-reactive-jdbc-sample
+
+https://github.com/netifi/webflux-rxjava2-jdbc-example/blob/master/src/main/java/io/netifi/asynchdb/webflux/EmployeeRepository.java
 
 
