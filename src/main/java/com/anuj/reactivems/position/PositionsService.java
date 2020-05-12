@@ -15,17 +15,45 @@ public class PositionsService {
 	private PositionRepository positionRepository;
 	
 	public Mono<Position> getPosition(String positionId){
-		Mono<Position> position = Mono.fromCallable(() -> positionRepository.findById(positionId).get());
+		final Mono<Position> position = Mono.fromCallable(() -> positionRepository.findById(positionId).get());
 		return position;
-		/*final Optional<Position> position = positionRepository.findById(positionId);
-		return Mono.just(position.get());*/
 	}
 
 	public Flux<Position> getAllPositions(){
 
 		final Flux<Position> defer = Flux.defer(() -> Flux.fromIterable(positionRepository.findAll()));
+		//defer.blockFirst();
 		return defer;
 	}
+	
+	/*public Flux<Position> getAllPositions_2(){
+
+		final Flux<Position> defer = Flux.fromIterable(() -> Flux.fromIterable(positionRepository.findAll()));
+		//defer.blockFirst();
+		return defer;
+	}
+	
+	public Flux<Position> getAllPositions_3(){
+
+		final Flux<Position> defer = Flux.defer(() -> Flux.fromIterable(positionRepository.findAll()));
+		//defer.blockFirst();
+		return defer;
+	}
+	
+	public Flux<Position> getAllPositions_4(){
+
+		final Flux<Position> defer = Flux.defer(() -> Flux.fromIterable(positionRepository.findAll()));
+		//defer.blockFirst();
+		return defer;
+	}
+	
+	public Flux<Position> getAllPositions_5(){
+
+		final Flux<Position> defer = Flux.defer(() -> Flux.fromIterable(positionRepository.findAll()));
+		//defer.blockFirst();
+		return defer;
+	}*/
+	
 	
 	public Flux<Position> getAllPositionsForACustomer(String customerId){
 
