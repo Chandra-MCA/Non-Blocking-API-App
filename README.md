@@ -7,7 +7,7 @@ When we use the spring framework in writing non blocking applications or reactiv
 ## Steps to setup this project
 1. Clone from github:
 
-git clone https://github.com/anuj-mehra/spring-boot-reactive-rest-api.git
+git clone https://github.com/Chandra-MCA/Non-Blocking-API-App/tree/master
 
 
 
